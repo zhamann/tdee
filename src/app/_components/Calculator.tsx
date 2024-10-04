@@ -58,7 +58,7 @@ export default function Calculator({
   }
 
   return (
-    <div className="flex min-w-96 max-w-md flex-col gap-4 rounded-xl bg-slate-900 p-8 md:gap-6">
+    <div className="flex w-full max-w-md flex-col gap-4 rounded-xl bg-slate-900 p-8 md:min-w-96 md:gap-6">
       <div className="flex flex-col gap-y-2 md:gap-y-4">
         <Switch
           value={formData?.gender}
