@@ -63,7 +63,7 @@ export default function HomePage() {
   }
 
   return (
-    <main className="flex h-full min-h-svh flex-col justify-center gap-12 bg-slate-950 py-16 text-white md:h-svh md:flex-row md:justify-start md:gap-0 md:overflow-hidden md:py-0">
+    <main className="relative flex h-full min-h-svh flex-col justify-center gap-12 bg-slate-950 py-16 text-white md:h-svh md:flex-row md:justify-start md:gap-0 md:overflow-hidden md:py-0">
       <div
         className={`flex shrink-0 items-center justify-center px-8 transition-transform duration-500 md:h-full md:w-[60svw] md:shrink-0 md:ps-16 ${
           showResults
@@ -95,6 +95,15 @@ export default function HomePage() {
         }`}
       >
         <Results bmr={bmr} tdee={tdee} setShowResults={setShowResults} />
+      </div>
+      <div className="absolute bottom-0 right-4 pb-4 text-xs text-slate-700 md:text-sm">
+        Designed by{" "}
+        <a
+          className="underline underline-offset-2"
+          href="https://github.com/zhamann"
+        >
+          Zac
+        </a>
       </div>
     </main>
   );
