@@ -4,8 +4,8 @@ import {
   gender,
   heightUnits,
   weightUnits,
-  type FormData,
-} from "../page";
+} from "~/utils/constants";
+import type { FormData } from "../page";
 import Number from "./inputs/Number";
 import Switch from "./inputs/Switch";
 import Select from "./inputs/Select";
@@ -14,7 +14,6 @@ interface CalculatorProps {
   formData: FormData;
   setFormData: Dispatch<SetStateAction<FormData>>;
   validation?: string;
-  setValidation: Dispatch<SetStateAction<string | undefined>>;
   handleCalculate: () => void;
 }
 
@@ -22,7 +21,6 @@ export default function Calculator({
   formData,
   setFormData,
   validation,
-  setValidation,
   handleCalculate,
 }: CalculatorProps) {
   function handleSwitch(name: string, value: string) {

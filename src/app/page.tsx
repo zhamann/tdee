@@ -4,17 +4,12 @@ import { useState } from "react";
 import Calculator from "./_components/Calculator";
 import Intro from "./_components/Intro";
 import Results from "./_components/Results";
-
-export const gender = ["Male", "Female"] as const;
-export const weightUnits = ["lbs", "kg"] as const;
-export const heightUnits = ["in", "cm"] as const;
-export const activityLevels = [
-  "Sedentary",
-  "Light (1-2 Days/Week)",
-  "Moderate (3-5 Days/Week)",
-  "Heavy (6-7 Days/Week)",
-  "Athlete (2x Per Day)",
-] as const;
+import type {
+  gender,
+  weightUnits,
+  heightUnits,
+  activityLevels,
+} from "~/utils/constants";
 
 export interface FormData {
   gender: (typeof gender)[number];
@@ -89,7 +84,6 @@ export default function HomePage() {
           formData={formData}
           setFormData={setFormData}
           validation={validation}
-          setValidation={setValidation}
           handleCalculate={handleCalculate}
         />
       </div>
