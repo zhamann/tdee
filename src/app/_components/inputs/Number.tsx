@@ -44,6 +44,7 @@ export default function Number({
           placeholder="0.0"
           value={inputValue}
           onChange={onInputChange}
+          inputMode="decimal"
           className={`block w-full rounded-md border-0 bg-slate-950 py-2.5 ${hasSelection && "pr-20"} text-xs text-white ring-1 ring-inset ring-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 md:text-sm`}
         />
         {hasSelection && (
